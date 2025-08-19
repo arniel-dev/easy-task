@@ -17,9 +17,7 @@ export class UserComponent {
   // @Input({ required: true }) avatar!: string;
   // @Input({ required: true }) name!: string;
   // @Input({ required: false }) id!: string;
-  @Output() select = new EventEmitter();
-  @Input({ required: false }) user!: User;
-  @Input({ required: true }) selected!: boolean;
+
   // get imagePath() {
   //   return '../../assets/users/' + this.avatar;
   // }
@@ -27,7 +25,9 @@ export class UserComponent {
   // avatar = input.required<string>();
   // name = input.required<string>();
   // id = input.required<string>();
-
+  @Output() select = new EventEmitter();
+  @Input({ required: false }) user!: User;
+  @Input({ required: true }) selected!: boolean;
   imagePath = computed(() => '../../assets/users/' + this.user.avatar);
 
   onSelectedUser() {

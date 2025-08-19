@@ -10,7 +10,7 @@
 
   <ul>
     @for (task of selectedUserTask; track $index) {
-    <li><app-task [task]="task" /></li>
+    <li><app-task [task]="task" (complete)="onCompleteTask(task.id)" /></li>
     }
   </ul>
 </section>

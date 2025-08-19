@@ -16,4 +16,9 @@ export class TaskManagement {
   get selectedUserTask(): Array<Task> {
     return this.tasks.filter((task) => task.userId === this.userId);
   }
+
+  onCompleteTask(id: string) {
+    console.log('completed', id);
+    this.tasks = this.tasks.filter((task) => task.id !== id);
+  }
 }
