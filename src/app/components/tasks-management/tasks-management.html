@@ -9,9 +9,8 @@
   </header>
 
   <ul>
-    @for (task of tasks; track $index) { @if(task.userId === userId){
+    @for (task of selectedUserTask; track $index) {
     <li><app-task [task]="task" /></li>
-
-    } }
+    }
   </ul>
 </section>
