@@ -4,13 +4,15 @@
   <header>
     <h2>{{ name }}'s Task</h2>
     <menu>
-      <button>Add Task</button>
+      <button (click)="onStartNewTask()">Add Task</button>
     </menu>
   </header>
-
+  @if (isAddingTask) {
+  <app-new-task (cancel)="onCancelAddTask()" (add)="OnSubmitNewTask($event)" />
+  }
   <ul>
     @for (task of selectedUserTask; track $index) {
-    <li><app-task [task]="task" (complete)="onCompleteTask(task.id)" /></li>
+    <li><app-task [task]="task" (complete)="onCompleteTask($event)" /></li>
     }
   </ul>
 </section>
