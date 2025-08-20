@@ -4,7 +4,9 @@
   <header>
     <h2>{{ name }}'s Task</h2>
     <menu>
-      <button (click)="onStartNewTask()">Add Task</button>
+      <app-card>
+        <button (click)="onStartNewTask()">Add Task</button>
+      </app-card>
     </menu>
   </header>
   @if (isAddingTask) {

@@ -3,9 +3,10 @@ import { dummyTasks } from '../../dummy-tasks';
 import { TaskComponent } from './task/task';
 import { NewTaskData, type Task } from './tasks.model';
 import { NewTask } from './new-task/new-task';
+import { Card } from '../../shared/card/card';
 @Component({
   selector: 'app-tasks-management',
-  imports: [TaskComponent, NewTask],
+  imports: [TaskComponent, NewTask, Card],
   templateUrl: './tasks-management.html',
   styleUrl: './tasks-management.css',
 })
